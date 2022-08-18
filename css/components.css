@@ -1,0 +1,485 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600&display=swap');
+
+:root {
+    --green: #27ae60;
+    --orange: #f39c12;
+    --red: #e74c3c;
+    --black: #333;
+    --light-color: #666;
+    --white: #fff;
+    --light-bg: #f6f6f6;
+    --border: .2rem solid var(--black);
+    --box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+}
+
+* {
+    font-family: 'Rubik', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    color: var(--black);
+}
+
+*::selection {
+    background: var(--green);
+    color: var(--white);
+}
+
+*::-webkit-scrollbar {
+    height: .5rem;
+    width: 1rem;
+}
+
+*::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+    background: var(--green);
+}
+
+body {
+    background: var(--light-bg);
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6.5rem;
+}
+
+section {
+    padding: 3rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.title {
+    font-size: 3.5rem;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+    color: var(--black);
+}
+
+.empty {
+    padding: 1.5rem;
+    background: var(--white);
+    border: var(--border);
+    border-radius: .5rem;
+    color: var(--red);
+    font-size: 2rem;
+    text-align: center;
+    box-shadow: var(--box-shadow);
+}
+
+.btn,
+.delete-btn,
+.option-btn {
+    text-align: center;
+    display: block;
+    width: 100%;
+    margin-top: 1rem;
+    font-size: 2rem;
+    padding: 1.3rem 3rem;
+    color: var(--white);
+    border-radius: .5rem;
+    text-transform: capitalize;
+    cursor: pointer;
+}
+
+.btn {
+    background: var(--green);
+}
+
+.flex-btn {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.flex-btn > * {
+    flex: 1;
+}
+
+.message {
+    position: sticky;
+    top: 0;
+    max-width: 1200px;
+    margin: 0 auto;
+    background: var(--light-bg);
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+    z-index: 10000;
+}
+
+.message span {
+    font-size: 2rem;
+    color: var(--black);
+}
+
+.message i {
+    cursor: pointer;
+}
+
+.fa-times {
+    font-size: 2.5rem;
+    cursor: pointer;
+    color: var(--red);
+}
+
+.delete-btn {
+    background: var(--red);
+}
+
+.option-btn {
+    background: var(--orange);
+}
+
+.btn:hover,
+.delete-btn:hover,
+.option-btn:hover {
+    background: var(--black);
+}
+
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.form-container form {
+    width: 50rem;
+    border: var(--border);
+    box-shadow: var(--box-shadow);
+    background: var(--white);
+    border-radius: .5rem;
+    padding: 2rem;
+    text-align: center;
+}
+
+.form-container form h3 {
+    font-size: 3rem;
+    color: var(--black);
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+}
+
+.form-container form .box {
+    width: 100%;
+    margin: 1rem 0;
+    border-radius: .5rem;
+    border: var(--border);
+    font-size: 1.8rem;
+    padding: 1.2rem 1.4rem;
+    color: var(--black);
+    background: var(--light-bg);
+}
+
+.form-container form p {
+    font-size: 2.2rem;
+    margin-top: 2rem;
+    color: var(--light-color);
+}
+
+.form-container form p a {
+    color: var(--green);
+}
+
+.form-container form p a:hover {
+    text-decoration: underline;
+}
+
+
+.header {
+    background: var(--white);
+    position: sticky;
+    top: 0; left: 0; right: 0;
+    z-index: 1000;
+    box-shadow: var(--box-shadow);
+}
+
+.header .flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.header .flex .logo {
+    color: var(--black);
+    font-size: 2.5rem;
+}
+
+.header .flex .logo span {
+    color: var(--green);
+}
+
+.header .flex .navbar a {
+    margin: 0 1rem;
+    font-size: 2rem;
+    color: var(--light-color);
+}
+
+.header .flex .navbar a:hover {
+    color: var(--green);
+    text-decoration: underline;
+}
+
+.header .flex .icons > * {
+    font-size: 2.5rem;
+    color: var(--light-color);
+    cursor: pointer;
+    margin-left: 1.5rem;
+}
+
+.header .flex .icons span,
+.header .flex .icons a i {
+    color: var(--light-color);
+}
+
+.header .flex .icons a:hover span,
+.header .flex .icons a:hover i {
+    color: var(--green);
+} 
+
+.header .flex .icons a span {
+    font-size: 2rem;
+}
+
+.header .flex .icons > *:hover {
+    color: var(--green);
+}
+
+#menu-btn {
+    display: none;
+}
+
+
+.header .flex .profile {
+    position: absolute;
+    top: 120%; right: 2rem;
+    box-shadow: var(--box-shadow);
+    border: var(--border);
+    border-radius: .5rem;
+    padding: 2rem;
+    text-align: center;
+    background: var(--white);
+    width: 33rem;
+    display: none;
+    animation: fadeIn .2s linear;
+}
+
+@keyframes fadeIn {
+    0% {
+        transform: translateY(1rem);
+    }
+}
+
+.header .flex .profile.active {
+    display: inline-block;
+}
+
+.header .flex .profile img {
+    width: 15rem;
+    height: 15rem;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+}
+
+.header .flex .profile p {
+    font-size: 2rem;
+    padding: .5rem 0;
+    color: var(--light-color);
+}
+
+
+.update-profile form {
+    max-width: 70rem;
+    margin: 0 auto;
+    background: var(--white);
+    box-shadow: var(--box-shadow);
+    border: var(--border);
+    padding: 2rem;
+    text-align: center;
+    border-radius: .5rem;
+}
+
+.update-profile form img {
+    border-radius: 50%;
+    width: 20rem;
+    height: 20rem;
+    margin-bottom: 1rem;
+    object-fit: cover;
+}
+
+.update-profile form .inputBox {
+    text-align: left;
+    width: 49%;
+}
+
+.update-profile form .flex {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: space-between;
+}
+
+.update-profile form .inputBox .box {
+    width: 100%;
+    padding: 1.2rem 1.4rem;
+    font-size: 1.8rem;
+    color: var(--black);
+    border: var(--border);
+    border-radius: .5rem;
+    margin: 1rem 0;
+    background: var(--light-bg);
+}
+
+
+.update-profile form .inputBox span {
+    display: block;
+    font-size: 1.8rem;
+    padding-top: 1rem;
+    color: var(--light-color);
+}
+
+
+
+.footer {
+    background: var(--white);
+}
+
+.footer .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(27rem, 1fr));
+    gap: 2.5rem;
+    align-items: flex-start;
+}
+
+.footer .box-container .box h3 {
+    font-size: 2rem;
+    color: var(--black);
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+}
+
+.footer .box-container .box p,
+.footer .box-container .box a {
+    display: block;
+    font-size: 1.6rem;
+    color: var(--light-color);
+    padding: 1.3rem 0;
+}
+
+.footer .box-container .box p i,
+.footer .box-container .box a i {
+    color: var(--green);
+    margin-right: 1rem;
+}
+
+.footer .box-container .box a:hover {
+    text-decoration: underline;
+    color: var(--green);
+}
+
+
+.footer .credit {
+    color: var(--black);
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 2rem;
+    padding: 2rem 1.5rem;
+    line-height: 1.5;
+    border-top: var(--border);
+}
+
+.footer .credit span {
+    color: var(--green);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* media queries */
+@media(max-width: 991px) {
+    html {
+        font-size: 55%;
+    }
+}
+
+
+@media(max-width: 768px) {
+    #menu-btn {
+        display: inline-block;
+    }
+
+    .header .flex .navbar {
+        border-top: var(--border);
+        border-bottom: var(--border);
+        background-color: var(--white);
+        position: absolute;
+        top: 99%; right: 0; left: 0;
+        transition: .2s linear;
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+
+    .header .flex .navbar.active {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+
+
+    .header .flex .navbar a {
+        display: block;
+        margin: 2rem;
+    }
+
+    .update-profile form .flex {
+        flex-wrap: wrap;
+        gap: 0;
+    }
+
+    .update-profile form .flex .inputBox {
+        width: 100%;
+    }
+}
+
+
+@media(max-width: 450px) {
+    html {
+        font-size: 50%;
+    }
+
+    .flex-btn {
+        flex-flow: column;
+        gap: 0;
+    }
+
+    .title {
+        font-size: 3rem;
+    }
+}
